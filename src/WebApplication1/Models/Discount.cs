@@ -15,11 +15,11 @@ public class Discount
     
     [Required]
     [MaxLength(200)]
-    public string Name { get; set; } = string.Empty;
+    public required string Name { get; set; } 
     
     [Required]
     [MaxLength(1000)]
-    public string Description { get; set; } = string.Empty;
+    public required string Description { get; set; } 
     
     [Required]
     [Range(0, 100)]
