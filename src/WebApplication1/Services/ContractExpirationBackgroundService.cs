@@ -1,5 +1,6 @@
 namespace WebApplication1.Services;
 
+//internet basically to help me implement the automatic expiration of contracts 
 public class ContractExpirationBackgroundService : BackgroundService
 {
     private readonly IServiceProvider _serviceProvider;
