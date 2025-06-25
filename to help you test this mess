@@ -1,0 +1,77 @@
+POST /api/individualclient
+{
+  "firstName": "Jan",
+  "lastName": "Kowalski",
+  "pesel": "80010112545",
+  "address": "ul. Marszałkowska 123, 00-001 Warszawa",
+  "email": "jan.kowalski@example.com",
+  "phoneNumber": "+48123156789"
+}
+PUT /api/individualclient/4
+{
+  "firstName": "Jan",
+  "lastName": "Kowalski-Nowak",
+  "pesel": "80010112345",
+  "address": "ul. Nowa 456, 00-002 Warszawa",
+  "email": "jan.nowak@example.com",
+  "phoneNumber": "+48987654321"
+}
+
+POST /api/companyclient
+{
+  "companyName": "TechCorp Solutions Sp. z o.o.",
+  "krsNumber": "1234597890",
+  "address": "ul. Biznesowa 100, 00-100 Warszawa",
+  "email": "contact@techcorp.pl",
+  "phoneNumber": "+48119222333"
+}
+PUT /api/companyclient/4
+{
+  "companyName": "TechCorp Solutions S.A.",
+  "krsNumber": "1234567890",
+  "address": "ul. Biznesowa 200, 00-200 Warszawa",
+  "email": "info@techcorp.pl",
+  "phoneNumber": "+48111222444"
+}
+POST /api/contract
+{
+  "clientId": 4,
+  "clientType": "individual",
+  "softwareSystemId": 1,
+  "startDate": "2025-06-20",
+  "endDate": "2025-07-10",
+  "supportYears": 2
+}
+POST /api/payment
+{
+  "contractId": 5,
+  "amount": 1500.00,
+  "paymentMethod": "Credit Card"
+}
+ INVALID LENGTH
+POST /api/contract
+{
+  "clientId": ,
+  "clientType": "individual",
+  "softwareSystemId": 1,
+  "startDate": "2024-12-20",
+  "endDate": "2024-12-21",
+  "supportYears": 1
+}
+INVALID PESEL
+POST /api/individualclient
+{
+  "firstName": "Test",
+  "lastName": "User",
+  "pesel": "123456789",
+  "address": "ul. Testowa 1",
+  "email": "test@example.com",
+  "phoneNumber": "+48123456789"
+}
+OVERPAYMENT ISSUE 
+POST /api/payment
+{
+  "contractId": 5,
+  "amount": 10000.00,
+  "paymentMethod": "Credit Card"
+}
