@@ -1,3 +1,4 @@
+this is just a simple creation of endpoints, so double check the ids and all, this is based on the seeded data in the context
 POST /api/individualclient
 {
   "firstName": "Jan",
@@ -38,6 +39,7 @@ POST /api/contract
   "clientId": 4,
   "clientType": "individual",
   "softwareSystemId": 1,
+  "softwareVersion": "1.20.40",
   "startDate": "2025-06-20",
   "endDate": "2025-07-10",
   "supportYears": 2
@@ -54,6 +56,7 @@ POST /api/contract
   "clientId": ,
   "clientType": "individual",
   "softwareSystemId": 1,
+  "softwareVersion": "1.20.40",
   "startDate": "2024-12-20",
   "endDate": "2024-12-21",
   "supportYears": 1
