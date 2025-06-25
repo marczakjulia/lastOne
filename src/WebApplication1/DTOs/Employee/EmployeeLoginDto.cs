@@ -6,9 +6,9 @@ public class EmployeeLoginDto
 {
     [Required]
     [MaxLength(50)]
-    public string Login { get; set; } = string.Empty;
+    public required string Login { get; set; }
     
     [Required]
     [MaxLength(100)]
-    public string Password { get; set; } = string.Empty;
+    public required string Password { get; set; }
 }

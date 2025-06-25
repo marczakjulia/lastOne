@@ -4,8 +4,8 @@ public class ContractResponseDto
 {
     public int Id { get; set; }
     public int ClientId { get; set; }
-    public string ClientType { get; set; } = string.Empty;
-    public string SoftwareSystemName { get; set; } = string.Empty;
+    public required string ClientType { get; set; } 
+    public required string SoftwareSystemName { get; set; } 
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
     public decimal FinalPrice { get; set; }

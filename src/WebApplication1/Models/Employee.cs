@@ -14,12 +14,12 @@ public class Employee
     
     [Required]
     [MaxLength(50)]
-    public string Login { get; set; } = string.Empty;
+    public required string Login { get; set; }
     
     [Required]
     [MaxLength(100)]
-    public string Password { get; set; } = string.Empty; // Will be hashed
+    public required string Password { get; set; }
     
     [Required]
-    public EmployeeRole Role { get; set; } = EmployeeRole.Standard;
+    public required EmployeeRole Role { get; set; }
 } 
