@@ -38,8 +38,8 @@ public class BusinessLogicTests
         );
         
         _context.Discount.AddRange(
-            new Discount { Id = 1, Name = "Spring Promotion", PercentageValue = 15.0m, DiscountType = DiscountType.Upfront, StartDate = DateTime.Now.AddDays(-30), EndDate = DateTime.Now.AddDays(30), SoftwareSystemId = 1, IsActive = true },
-            new Discount { Id = 2, Name = "Enterprise Deal", PercentageValue = 10.0m, DiscountType = DiscountType.Upfront, StartDate = DateTime.Now.AddDays(-15), EndDate = DateTime.Now.AddDays(45), SoftwareSystemId = 2, IsActive = true }
+            new Discount { Id = 1, Name = "Spring Promotion", PercentageValue = 15.0m, Description = "fd", DiscountType = DiscountType.Upfront, StartDate = DateTime.Now.AddDays(-30), EndDate = DateTime.Now.AddDays(30), SoftwareSystemId = 1, IsActive = true },
+            new Discount { Id = 2, Name = "Enterprise Deal", PercentageValue = 10.0m, Description = "fd", DiscountType = DiscountType.Upfront, StartDate = DateTime.Now.AddDays(-15), EndDate = DateTime.Now.AddDays(45), SoftwareSystemId = 2, IsActive = true }
         );
         
         _context.Contract.AddRange(
